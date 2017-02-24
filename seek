@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# seek script used in bash shell
+#                                                                                                                                                                                                                  
+# Copyright (C) 2016 Sl0v3C.
+#
+# Author: Sl0v3C <pyy101727@gmail.com>
+#
+# License terms:
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 2 as published
+# by the Free Software Foundation.
+
+
+if [ $# -eq 1 ]; then
+	arg=$(echo $1 | sed "s/\:\([0-9]*\)\:.*/ \+\1/")
+else
+	echo "Only one parameter!"
+fi
+
+vi $arg

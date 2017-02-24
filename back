@@ -1,0 +1,42 @@
+# back script used in bash shell
+#                                                                                                                                                                                                                  
+# Copyright (C) 2016 Sl0v3C.
+#
+# Author: Sl0v3C <pyy101727@gmail.com>
+#
+# License terms:
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 2 as published
+# by the Free Software Foundation.
+
+function back()
+{
+    if [ $# -eq 1 ]; then
+        if [ $1 = "b" ]; then
+                cd $pathbak
+        else
+                pathbak=`pwd`
+                local count=$1
+                while :
+                do
+                local path=`pwd`
+                if [ $path = "/" ]; then
+                        echo "You are now in the root path..."
+                        break
+                fi
+                if [ $count -eq 0 ]; then
+                        break
+                else
+                        cd ..
+                fi
+                count=`expr $(($count-1))`
+                done
+        fi
+    else
+        echo "Usage: Please only take one arg, like: back 3 will cd ../../../"
+        echo "or back b will return the path before"
+    fi
+}
+	
+

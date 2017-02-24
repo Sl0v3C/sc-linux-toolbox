@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# push_mp3 script used in bash shell
+#                                                                                                                                                                                                                  
+# Copyright (C) 2016 Sl0v3C.
+#
+# Author: Sl0v3C <pyy101727@gmail.com>
+#
+# License terms:
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 2 as published
+# by the Free Software Foundation.
+
+count=1
+sum=$#
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 xxx.mp3 xxxx.mp3 ..."
+else
+    while [ $count -le $sum ];
+    do
+        echo "$1" > temp
+        grep -i ".mp3" temp
+        ret=$?
+        if [ $ret -eq 0 ]; then
+            echo "Push $1 into device /sdcard/Music/"
+            adb push $1 /sdcard/Music/
+        else
+            echo "Pleae push mp3 file"
+        fi
+        count=`expr $(($count+1))`
+        shift
+    done
+    rm temp
+fi
+
+
