@@ -80,7 +80,7 @@ sc-linux-toolbox
 	       Run it in adb shell： yygrep mediaserver
 	       It like pgrep tool.
 
-### 9. tinypyyplayer -- It contains many tools: A. pcmplay; B. mp3ToPcm; C. tinypyyplay D. mp3Parse E. tinypyyplay_fifo
+### 9. tinypyyplayer -- It contains many tools:
 	Usage: A. pcmplay
 	        run "pcmplay file.wav [-D card] [-d device] [-p period_size] [-n n_periods]" 
 		in adb shell
