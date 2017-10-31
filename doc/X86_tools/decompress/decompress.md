@@ -5,3 +5,6 @@ You can copy it to ```PATH``` like ```/usr/local/bin/decompress```, then you can
 
 	Usage: decompress file
            file should be compressed file, like: 1.tar/2.tar.xz/3.tar.gz, etc.
+
+	MD5: b40cb07cf54977c12a5863b90ad109c6
+	Please check the MD5 value when you use the decompress.py

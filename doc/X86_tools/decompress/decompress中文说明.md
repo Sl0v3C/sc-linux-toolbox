@@ -3,3 +3,5 @@
 用户可以拷贝到系统路径下，例如```/usr/local/bin/decompress```， 这样就可以随意运行。  
 	
 	Usage: decompress 压缩文件名
+	MD5值： b40cb07cf54977c12a5863b90ad109c6
+	请在使用decompress.py前先检查MD5值。
