@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# Descritpion: This cp script used to enhance the cp tool
+# Author: Yangyi_Peng(Sl0v3C)
+# Date: 2021/11/24
+
+function help()
+{
+    echo "Usage:"
+    echo "$0 file1 file2"
+    echo "$0 file1 /path/.../file2"
+    echo "$0 file1 /path/.../"
+    echo "$0 dir1 /path/.../dir2"
+    echo "$0 dir1 /path/.../"
+    echo "No matters the prefix path is existed or not."
+}
+
+
+if [ $# -eq 2 ]; then
+    src=$1
+    dst=$2
+    if [ -f "$dst" ] || [ -d "$dst" ]; then
+        echo "The $dst is already existed, exiting..."
+        exit
+    elif [ -f "$src" ] || [ -d "$src" ]; then
+        filename="${dst##*/}"
+        dir="${dst:0:${#dst} - ${#filename}}"
+        if [ "$filename" == "$dst" ]; then
+            if [ -f "$src" ]; then
+                cp $src $dst
+            fi
+        else
+            if [ -d "$dir" ]; then
+                cp $src $dst -r
+            else
+                mkdir -p $dir
+                cp $src $dst -r
+            fi
+        fi
+
+    else
+        help
+    fi
+else
+    help
+fi
+
