@@ -22,7 +22,7 @@ Some of them also can run in XP or Mac OS.
 * [back](./doc/X86_tools/Enhance_Linux_Tool/back.md):add back function into .bashrc, then you can back to the num folder by "back Num" when you want and back to your last folder by "back b".
 * [recursive_rm_null_directory](./doc/X86_tools/Enhance_Linux_Tool/recursive_rm_null_directory.md):Recursively delete empty directories.
 * [seek](./doc/X86_tools/Enhance_Linux_Tool/seek.md):Which use the vi to the exact line you searched.
-* [yy_cp](./doc/X86_tools/Enhance_Linux_Tool/yy_cp.md):Enhance for the cp command.
+* [ecp](./doc/X86_tools/Enhance_Linux_Tool/ecp.md):Enhance for the cp command.
 * [push_mp3](./doc/X86_tools/ForAndroidDeviceTool/push_mp3.md):Push MP3 files into your ARM device by adb push command.
 
 ### [Chinese Version README](./说明.md)
